@@ -1,0 +1,5 @@
+export const ProductsListPage = () =>{
+    return(
+        <></>
+    );
+}
