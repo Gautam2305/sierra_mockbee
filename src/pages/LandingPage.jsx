@@ -1,7 +1,12 @@
-export const LandingPage = () => {
+import { Category } from "../components/Category";
+import { NavBar } from "../components/NavBar";
+import { Footer } from "../components/Footer";
+export const LandingPage = () =>{
     return(
         <div>
-        this is the landing page.
+        <NavBar/>
+        <Category/>
+        <Footer/>
         </div>
     );
 }
