@@ -46,6 +46,6 @@
   color: var(--st-primary-text);
 }
 .bag-icon:hover, 
-.wishlist-icon{
+.wishlist-icon:hover{
   color: var(--st-primary);
 }
