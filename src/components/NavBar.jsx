@@ -9,7 +9,7 @@ export const NavBar = () =>{
                 </div>
                 <input className="nav-search" type="text" placeholder="Search for products, brands & more..."/>
                 <div className="nav-icons">
-                    <Link to="/logout" element={<LogoutPage/>}><button className="btn-primary-solid link-primary-solid"><h4>LOGOUT</h4></button></Link>
+                    <Link to="/logout"><button className="btn-primary-solid link-primary-solid"><h4>LOGOUT</h4></button></Link>
                     <Link to="/wishlist" className="btn-icon wishlist-icon"><i className="fa-regular fa-heart"></i><h6> Wishlist</h6></Link>
                     <Link to="/cart" className="btn-icon bag-icon "><i className="fa-solid fa-bag-shopping"></i><h6> Bag</h6></Link>
                 </div>
