@@ -1,5 +1,4 @@
-@import url("https://sierra-shop.netlify.app/style.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"); */
 .brand-name{
   width: 12rem;
   text-align:center;
@@ -42,4 +41,11 @@
 }
 .main-foot{
   margin-top:5rem;
+}
+.bag-icon{
+  color: var(--st-primary-text);
+}
+.bag-icon:hover, 
+.wishlist-icon{
+  color: var(--st-primary);
 }
