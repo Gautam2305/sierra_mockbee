@@ -29,14 +29,14 @@ export const Category = () =>{
                     <div>
                         <Link to="/products" element={<ProductsListPage/>}>
                         <img src={womenKurta} alt="liba's kurta" className="category-img"/>
-                        <h3 className="category-name"> Liba's  </h3>
                         </Link>
+                        <h3 className="category-name"> Liba's  </h3>
                     </div>
                     <div>
                         <Link to="/products" element={<ProductsListPage/>}>
                         <img src={wBrand} alt="w kurta" className="category-img"/>
-                        <h3 className="category-name">W </h3>
                         </Link>
+                        <h3 className="category-name">W </h3>
                     </div>
                 </div>
                 <div className="category-header">
@@ -48,20 +48,20 @@ export const Category = () =>{
                     <div>
                         <Link to="/products" element={<ProductsListPage/>}>
                         <img src={hAndMShirt} alt="H&M shirt" className="category-img"/>
-                        <h3 className="category-name"> H&M </h3>
                         </Link>
+                        <h3 className="category-name"> H&M </h3>
                     </div>
                     <div>
                         <Link to="/products" element={<ProductsListPage/>}>
                         <img src={newBalanceTShirt} alt="new balance shoes" className="category-img"/>
-                        <h3 className="category-name">NB ACTIVE WEAR </h3>
                         </Link>
+                        <h3 className="category-name">NB ACTIVE WEAR </h3>
                     </div>
                     <div>
                         <Link to="/products" element={<ProductsListPage/>}>
                         <img src={uspaShirt} alt="footwear" className="category-img"/>
-                        <h3 className="category-name"> U.S POLO ASSN.</h3>
                         </Link>
+                    <h3 className="category-name"> U.S POLO ASSN.</h3>
                     </div>
                 </div>
                 <div className="category-header">
@@ -73,20 +73,20 @@ export const Category = () =>{
                     <div>
                         <Link to="/products" element={<ProductsListPage/>}>
                         <img src={nikeShoes} alt="nike shoes" className="category-img"/>
-                        <h3 className="category-name">NIKE SHOES </h3>
                         </Link>    
+                        <h3 className="category-name">NIKE SHOES </h3>
                     </div>
                     <div>
                         <Link to="/products" element={<ProductsListPage/>}>
                         <img src={newBalanceShoes} alt="new balance shoes" className="category-img"/>
-                        <h3 className="category-name">NEW BALANCE SHOES </h3>
                         </Link>    
+                        <h3 className="category-name">NEW BALANCE SHOES </h3>
                     </div>
                     <div>
                         <Link to="/products" element=   {<ProductsListPage/>}>
                         <img src={adidasShoes} alt="footwear" className="category-img"/>
-                        <h3 className="category-name">ADIDAS SHOES </h3>
                         </Link>    
+                        <h3 className="category-name">ADIDAS SHOES </h3>
                     </div>
                 </div>
             </main>
