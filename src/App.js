@@ -1,7 +1,8 @@
 import "./App.css";
-import { CartPage } from "./pages/CartPage";
+import { MockAPI } from "./mockman";
 import { LandingPage } from "./pages/LandingPage";
 import { LogoutPage } from "./pages/LogoutPage";
+import { ProductsListPage } from "./pages/ProductsListPage";
 import { WishlistPage } from "./pages/WishlistPage";
 import { RouterPath } from "./router/routes.js";
 function App() {
@@ -12,8 +13,9 @@ function App() {
       <RouterPath>
       <LandingPage></LandingPage> 
       <WishlistPage></WishlistPage>
-      <CartPage></CartPage>
+      <ProductsListPage></ProductsListPage>
       <LogoutPage></LogoutPage>
+      <MockAPI></MockAPI>
       </RouterPath> 
     </div>
   );
