@@ -47,17 +47,16 @@ return(
                     <input
                     id="category-radio"
                     name="ratings-radio"
-                    checked = {state.ratings}
+                    value = "4STARS_&_ABOVE"
                     type="radio" 
                     className="filter-radio"
-                    onChange = { () => dispatch({type:"RATINGS" , payload:"4STARS_&_ABOVE"})}/>
+                    onChange = { (e) => dispatch({type:"RATINGS" , payload: e.target.value})}/>
                     4 Stars & above
                 </label>
                 <label htmlFor="category-radio2" className="category-list">
                     <input 
                     id="category-radio2"
                     name="ratings-radio"
-                    checked = {state.ratings}
                     type="radio" 
                     className="filter-radio"
                     onChange={ () => dispatch ({ type:"RATINGS" , payload:"3STARS_&_ABOVE"})}/>
@@ -67,7 +66,6 @@ return(
                     <input 
                     id="category-radio3"
                     name="ratings-radio"
-                    checked = {state.ratings}
                     type="radio" 
                     className="filter-radio" 
                     onChange={ () => dispatch({type:"RATINGS" , payload:"2STARS_&_ABOVE"})}/>
@@ -78,7 +76,6 @@ return(
                     <input
                     id="category-radio4"
                     name="ratings-radio"
-                    checked = {state.ratings} 
                     type="radio" 
                     className="filter-radio" 
                     onChange={ () => dispatch({type:"RATINGS" , payload:"1STARS_&_ABOVE"})}/>

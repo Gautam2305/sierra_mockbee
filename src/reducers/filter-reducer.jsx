@@ -7,7 +7,6 @@ export const filterReducer = (state, action) => {
             return {...state, categories:{...state.categories, women: !state.categories.women}};
 
         case "FOOTWEAR":
-            console.log(state.categories.footwear)
             return {...state, categories: {...state.categories, footwear: !state.categories.footwear}};
         
         case "RATINGS": 

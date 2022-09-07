@@ -54,7 +54,9 @@ const ratingFilter = (ratingsList, ratingsValue) => {
     else if ( ratingsValue === "1STARS_&_ABOVE"){
         return [...ratingsList].filter( (item) => item.ratings >= 1)
     }
-    else return ratingsList;
+    else {
+        return [...ratingsList]
+    }
 }
 export {
     ratingFilter, 
