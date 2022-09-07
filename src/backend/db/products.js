@@ -27,7 +27,7 @@ export const products = [
     inStock: true,
     originalPrice: "9999",
     percentOff: "60%",
-    fastDelivery: false,
+    fastDelivery: true,
     ratings: 4
   }, 
   {
@@ -36,10 +36,10 @@ export const products = [
     price: 4999,
     categoryName: "footwear",
     imgSrc:"../assets/prod-nike-shoe3.jpg",
-    inStock: true,
+    inStock: false,
     originalPrice: "9999",
     percentOff: "60%",
-    fastDelivery: false,
+    fastDelivery: true,
     ratings: 4
   }, 
   {
@@ -75,7 +75,7 @@ export const products = [
     inStock: true,
     originalPrice: "9999",
     percentOff: "60%",
-    fastDelivery: false,
+    fastDelivery: true,
     ratings: 4
   },
   {
@@ -84,7 +84,7 @@ export const products = [
     price: 6999,
     categoryName: "footwear",
     imgSrc:"../assets/prod-nb-shoe2.jpg",
-    inStock: true,
+    inStock: false,
     originalPrice: "9999",
     percentOff: "60%",
     fastDelivery: false,
@@ -132,7 +132,7 @@ export const products = [
     price: 4599,
     categoryName: "footwear",
     imgSrc:"../assets/prod-adidas3.jpg",
-    inStock: true,
+    inStock: false,
     originalPrice: "9999",
     percentOff: "60%",
     fastDelivery: false,
@@ -147,7 +147,7 @@ export const products = [
     inStock: true,
     originalPrice: "9999",
     percentOff: "60%",
-    fastDelivery: false,
+    fastDelivery: true,
     ratings: 4
   },
   {
@@ -159,7 +159,7 @@ export const products = [
     inStock: true,
     originalPrice: "9999",
     percentOff: "60%",
-    fastDelivery: false,
+    fastDelivery: true,
     ratings: 4
   },
   {
@@ -171,7 +171,7 @@ export const products = [
     inStock: true,
     originalPrice: "9999",
     percentOff: "60%",
-    fastDelivery: false,
+    fastDelivery: true,
     ratings: 4
   },
   {
@@ -207,7 +207,7 @@ export const products = [
     inStock: true,
     originalPrice: "9999",
     percentOff: "60%",
-    fastDelivery: false,
+    fastDelivery: true,
     ratings: 4
   },
   {
@@ -255,7 +255,7 @@ export const products = [
     inStock: true,
     originalPrice: "9999",
     percentOff: "60%",
-    fastDelivery: false,
+    fastDelivery: true,
     ratings: 1.5
   },
   {
@@ -279,7 +279,7 @@ export const products = [
     inStock: true,
     originalPrice: "9999",
     percentOff: "60%",
-    fastDelivery: false,
+    fastDelivery: true,
     ratings: 3.8
   },
   {
@@ -303,7 +303,7 @@ export const products = [
     inStock: true,
     originalPrice: "9999",
     percentOff: "60%",
-    fastDelivery: false,
+    fastDelivery: true,
     ratings: 4.1
   },
   {
@@ -327,7 +327,7 @@ export const products = [
     inStock: true,
     originalPrice: "9999",
     percentOff: "60%",
-    fastDelivery: false,
+    fastDelivery: true,
     ratings: 4.5
   },
   {
@@ -363,7 +363,7 @@ export const products = [
     inStock: true,
     originalPrice: "9999",
     percentOff: "60%",
-    fastDelivery: false,
+    fastDelivery: true,
     ratings: 3
   },
 ];

@@ -11,11 +11,11 @@ function App() {
       <header className="App-header">
       </header>
       <RouterPath>
-      <LandingPage></LandingPage> 
-      <WishlistPage></WishlistPage>
-      <ProductsListPage></ProductsListPage>
-      <LogoutPage></LogoutPage>
-      <MockAPI></MockAPI>
+      <LandingPage/>
+      <WishlistPage/>
+      <ProductsListPage/>
+      <LogoutPage/>
+      <MockAPI/>
       </RouterPath> 
     </div>
   );
