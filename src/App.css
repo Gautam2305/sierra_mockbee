@@ -83,3 +83,16 @@
 .rating-star{
   color: var(--st-yellow);
 }
+.filter-category{
+  padding-left: 0.5rem;
+}
+.filter-radio{
+  font-family: var(--st-main-text);
+}
+.filter-sub-container{
+  display: flex;
+  flex-direction: row;
+}
+.category-list{
+  display:block;
+}
