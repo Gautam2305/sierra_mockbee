@@ -1,12 +1,12 @@
-import adidasShoes from "../assets/adidas-shoes.jpg";
-import nikeShoes from "../assets/nike-shoes.jpg";
-import newBalanceShoes from "../assets/new-b-shoes.jpg";
-import hAndMShirt from "../assets/h&m-shirt.webp";
-import levisShirt from "../assets/levis-shirt.webp";
-import wBrand from "../assets/w-kurta.webp";
-import womenKurta from "../assets/women-kurta.webp";
-import newBalanceTShirt from "../assets/new-balance-t-shirt.jpg";
-import uspaShirt from"../assets/uspa-shirt.webp";
+import adidasShoes from "../categ-assets/adidas-shoes.jpg";
+import nikeShoes from "../categ-assets/nike-shoes.jpg";
+import newBalanceShoes from "../categ-assets/new-b-shoes.jpg";
+import hAndMShirt from "../categ-assets/h&m-shirt.webp";
+import levisShirt from "../categ-assets/levis-shirt.webp";
+import wBrand from "../categ-assets/w-kurta.webp";
+import womenKurta from "../categ-assets/women-kurta.webp";
+import newBalanceTShirt from "../categ-assets/new-balance-t-shirt.jpg";
+import uspaShirt from "../categ-assets/uspa-shirt.webp";
 import { ProductsListPage } from "../pages/ProductsListPage";
 import { Link } from "react-router-dom";
 

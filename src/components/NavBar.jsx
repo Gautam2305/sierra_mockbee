@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"; 
-import { LogoutPage } from "../pages/LogoutPage";
 export const NavBar = () =>{
     return(
         <div>
