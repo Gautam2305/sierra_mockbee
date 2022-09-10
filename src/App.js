@@ -4,6 +4,7 @@ import { LandingPage } from "./pages/LandingPage";
 import { LogoutPage } from "./pages/LogoutPage";
 import { ProductsListPage } from "./pages/ProductsListPage";
 import { WishlistPage } from "./pages/WishlistPage";
+import { LoginPage } from "./pages/LoginPage";
 import { RouterPath } from "./router/routes.js";
 function App() {
   return (
@@ -11,10 +12,10 @@ function App() {
       <header className="App-header">
       </header>
       <RouterPath>
+      <LoginPage/>
       <LandingPage/>
       <WishlistPage/>
       <ProductsListPage/>
-      <LogoutPage/>
       <MockAPI/>
       </RouterPath> 
     </div>
