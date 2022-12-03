@@ -96,3 +96,15 @@
 .category-list{
   display:block;
 }
+.empty-wishlist{
+  font-size: 5rem;
+  text-align: center;
+  font-family: var(--st-primary-text);
+}
+.wishlist-main{
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-container{
+  width: 100%;
+}

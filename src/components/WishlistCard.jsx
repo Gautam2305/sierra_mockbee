@@ -1,38 +1,12 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../contexts/auth-context";
-import { useWishlist } from "../contexts/wishlist-context";
+import { Link } from "react-router-dom";
 import axios from "axios";
-const ProductCard = ({item,inWishlist}) =>{
-    const navigate = useNavigate();
+import { useWishlist } from "../contexts/wishlist-context";
+import { useAuth } from "../contexts/auth-context";
+export const WishlistCard = ({item}) => {
+    const {wishlist, setWishlist} = useWishlist();
     const {user} = useAuth();
-    const {wishlist,setWishlist} = useWishlist();
-
-    const addToWishlist = async () =>{
-        if(user.token === null){
-            navigate("/login");
-        }
-        try{
-            if(wishlist.wishList.find(prod => prod._id === item._id)){
-                console.log("Already in wishlist");
-
-            }else{
-                const response = await axios({
-                    method: "post",
-                    url: "/api/user/wishlist",
-                    headers: {authorization: user.token},
-                    data:{product: item}
-            });
-            setWishlist({ wishList: response.data.wishlist});
-            navigate("/products");
-            }
-        }catch(error){
-            console.log(error);
-            navigate("*");
-        }
-
-    }
-    const removeFromWishlist = async () =>{
+    console.log(item);
+    const removeFromWishlist2 = async () =>{
         try{
             const responseDel = await axios({
                 method: "delete",
@@ -42,14 +16,14 @@ const ProductCard = ({item,inWishlist}) =>{
             });
             
             setWishlist({ wishList: responseDel.data.wishlist});
+            console.log(wishlist.wishList)
 
         }catch(error){
             console.log(error);
         }
 
     }
-
-    return(
+    return (
         <div>
             <div className="card-container">
             <div className="prod-img-container">
@@ -69,11 +43,10 @@ const ProductCard = ({item,inWishlist}) =>{
                 </div>
             </div>
             <div className="cta-button">
-            {inWishlist ? (<button className="btn-primary-solid link-primary-solid" onClick={removeFromWishlist}><h4>REMOVE FROM WISHLIST</h4></button>) : (<button className=" btn-primary-solid link-primary-solid" onClick={addToWishlist}><h4>ADD TO WISHLIST</h4></button>)}
+            <button className="btn-primary-solid link-primary-solid" onClick={removeFromWishlist2}><h4>REMOVE FROM WISHLIST</h4></button>
                 <button className="btn-primary-outline"><Link className="link-primary-outline" to="/cart"><h4>ADD TO BAG</h4></Link></button>
             </div>
         </div>
         </div>
     )
 }
-export { ProductCard };
