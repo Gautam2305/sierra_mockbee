@@ -6,7 +6,7 @@ import { ratingFilter,
         sortByFilter,
         sortByCategoryFilter } from "../utils/filter-utilities";
 import { useFilter } from "../contexts/filter-context";
-import { useWishlist, WishlistProvider } from "../contexts/wishlist-context";
+import { useWishlist} from "../contexts/wishlist-context";
 export const ProductList = () => {
     const { products } = useProduct();
     const { state } = useFilter();
@@ -19,7 +19,7 @@ export const ProductList = () => {
     const inStockFilterList = inStockFilter(fastDeliveryFilterList, state.inStock);
     const sortByFilterList = sortByFilter(inStockFilterList, state.sortBy);
     const ratingList = ratingFilter(sortByFilterList, state.ratings);
-    const sortByCategoryFilterList = sortByCategoryFilter(ratingList, state.categories)
+    const sortByCategoryFilterList = sortByCategoryFilter(ratingList, state.categories);
     
     // console.log(sortByCategoryFilterList);
     return (
