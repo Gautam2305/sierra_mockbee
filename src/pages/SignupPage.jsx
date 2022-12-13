@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { NavBar } from "../components/NavBar";
 import axios from "axios";
 import { useAuth } from "../contexts/auth-context";

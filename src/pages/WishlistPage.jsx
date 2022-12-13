@@ -11,12 +11,12 @@ export const WishlistPage = () => {
         <NavBar/>
         <main className="main-login wishlist-main">
         <div className="card-container">
-        { wishlist.wishList.map(prod => {
+        { wishlist.wishList.map(prod => 
                 <ProductCard
                 inWishlist={wishlistId.includes(prod._id)}
                 key={prod.id} 
                 item={prod} />
-                })}
+                )}
         
         </div>
     </main>
