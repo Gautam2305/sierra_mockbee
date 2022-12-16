@@ -1,9 +1,8 @@
 import { useState } from "react";
 import React from "react";
-import { users } from "../backend/db/users";
 import { NavBar } from "../components/NavBar";
 import { useAuth } from "../contexts/auth-context";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const LoginPage = () =>{

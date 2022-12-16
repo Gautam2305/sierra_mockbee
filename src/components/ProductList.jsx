@@ -6,22 +6,30 @@ import { ratingFilter,
         sortByFilter,
         sortByCategoryFilter } from "../utils/filter-utilities";
 import { useFilter } from "../contexts/filter-context";
+import { useWishlist} from "../contexts/wishlist-context";
 export const ProductList = () => {
     const { products } = useProduct();
-    const { state ,dispatch } = useFilter();
+    const { state } = useFilter();
+    const { wishlist } = useWishlist();
+    const wishlistId = wishlist.wishList.map((item) => item._id); 
 
+    
+    //filter functions
     const fastDeliveryFilterList = fastDeliveryFilter( products, state.fastDelivery);
     const inStockFilterList = inStockFilter(fastDeliveryFilterList, state.inStock);
     const sortByFilterList = sortByFilter(inStockFilterList, state.sortBy);
     const ratingList = ratingFilter(sortByFilterList, state.ratings);
-    const sortByCategoryFilterList = sortByCategoryFilter(ratingList, state.categories)
+    const sortByCategoryFilterList = sortByCategoryFilter(ratingList, state.categories);
     
-
+    // console.log(sortByCategoryFilterList);
     return (
         <div>
             <div className="product-list-container">
                 {sortByCategoryFilterList.map(item=>
-                <ProductCard key={item.id} item={item} />
+                <ProductCard  
+                inWishlist={wishlistId.includes(item._id)}
+                key={item.id} 
+                item={item} />
                 )}
         
             </div>

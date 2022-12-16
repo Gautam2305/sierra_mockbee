@@ -96,3 +96,9 @@
 .category-list{
   display:block;
 }
+.wishlist-container{
+  display: grid;
+  grid-template-columns: repeat(3,20rem);
+  margin: auto;
+  gap: 1rem;
+}
