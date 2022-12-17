@@ -1,5 +1,4 @@
 import { useFilter } from "../contexts/filter-context";
-import { useProduct } from "../contexts/product-context";
 const Filter = () => {
     const { state, dispatch } = useFilter();
 return(
