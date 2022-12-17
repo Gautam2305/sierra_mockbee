@@ -90,7 +90,7 @@ export const CartCard = ({item}) => {
                 </div>    
             </div> 
             <div className="secondary-btn-container">
-                <button className="btn-secondary-solid"><a className="link-primary-solid" href="#"><h4>PLACE ORDER</h4></a></button>
+                <button className="btn-secondary-solid link-primary-solid"><h4>PLACE ORDER</h4></button>
         </div>
         </div>
         </div>
