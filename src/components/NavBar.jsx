@@ -4,8 +4,8 @@ import { useCart } from "../contexts/cart-context";
 import { useWishlist } from "../contexts/wishlist-context";
 export const NavBar = () =>{
     const { user,setUser } = useAuth();
-    const { wishlist, setWishlist} = useWishlist();
-    const {cart, setCart} = useCart();
+    const { setWishlist} = useWishlist();
+    const {setCart} = useCart();
     const navigate = useNavigate();
     const logoutHandler = () => {
         setUser({token:null});

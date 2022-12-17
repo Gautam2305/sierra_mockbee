@@ -2,7 +2,6 @@ import { useFilter } from "../contexts/filter-context";
 import { useProduct } from "../contexts/product-context";
 const Filter = () => {
     const { state, dispatch } = useFilter();
-    const { products } = useProduct()
 return(
 <div>
     <div className="filter-container">
