@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/auth-context";
 import { useWishlist } from "../contexts/wishlist-context";
 import axios from "axios";
-const ProductCard = ({item,inWishlist}) =>{
+import { useCart } from "../contexts/cart-context";
+const ProductCard = ({item,inWishlist,inCart}) =>{
     const navigate = useNavigate();
     const {user} = useAuth();
     const {wishlist,setWishlist} = useWishlist();
+    const {cart,setCart} = useCart();
 
     const addToWishlist = async () =>{
         if(user.token === null){
@@ -49,6 +51,38 @@ const ProductCard = ({item,inWishlist}) =>{
 
     }
 
+    const addToCart = async () =>{
+        if(user.token === null){
+            navigate("/login")
+        }
+        try{
+            const cartRes = await axios({
+                method:"post",
+                url:"/api/user/cart",
+                headers: {authorization: user.token},
+                data: {product: item}
+            })
+            setCart({cart: cartRes.data.cart})
+            console.log(cartRes.data.cart);
+        }catch(error){
+            console.log("Oops", error);
+        }
+    }
+    const removeFromCart = async () => {
+        try{
+            const cartDelRes = await axios({
+                method: "delete",
+                url: `/api/user/cart/${item._id}`,
+                headers: {authorization: user.token},
+                data: {product: item}
+            })
+            setCart({cart: cartDelRes.data.cart})
+        }catch(error){
+            console.log(error);
+        }
+    }
+    
+
     return(
         <div>
             <div className="card-container">
@@ -70,7 +104,7 @@ const ProductCard = ({item,inWishlist}) =>{
             </div>
             <div className="cta-button">
             {inWishlist ? (<button className="btn-primary-solid link-primary-solid" onClick={removeFromWishlist}><h4>REMOVE FROM WISHLIST</h4></button>) : (<button className=" btn-primary-solid link-primary-solid" onClick={addToWishlist}><h4>ADD TO WISHLIST</h4></button>)}
-                <button className="btn-primary-outline"><Link className="link-primary-outline" to="/cart"><h4>ADD TO BAG</h4></Link></button>
+            {inCart? (<button className="btn-primary-outline link-primary-outline" onClick={removeFromCart} ><h4>REMOVE FROM BAG</h4></button>):(<button className="btn-primary-outline link-primary-outline" onClick={addToCart} ><h4>ADD TO BAG</h4></button>)}
             </div>
         </div>
         </div>

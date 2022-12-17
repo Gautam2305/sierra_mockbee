@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
-export const CartPage=() => {
+import { CartCard } from "../components/CartCard";
+import { useCart } from "../contexts/cart-context";
+export const CartPage=({item}) => {
+    const {cart} = useCart();
+
+    const cartId = cart.cart.map(item => item._id);
     return(
         <div>
             <nav className="main-nav">
@@ -12,6 +17,14 @@ export const CartPage=() => {
                     <Link to="/wishlist" className="btn-icon wishlist-icon"><i className="fa-regular fa-heart"></i><h6> Wishlist</h6></Link>
                 </div>
             </nav>
+            <div>
+            {cart.cart.map(item => (
+                <CartCard
+                inCart={cartId.includes(item._id)}
+                key={item.id}
+                item={item} />
+            ))}
+            </div>
         </div>
     );
 }

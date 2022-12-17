@@ -1,5 +1,5 @@
+import axios from "axios";
 import React from "react";
-import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/auth-context";
 import { useCart } from "../contexts/cart-context";
 
@@ -7,60 +7,95 @@ export const CartCard = ({item}) => {
     const { user }= useAuth();
     const { cart, setCart } = useCart();
 
+    const removeFromCart = async () => {
+        try{
+            const cartDelRes = await axios({
+                method: "delete",
+                url: `/api/user/cart/${item._id}`,
+                headers: {authorization: user.token},
+                data: {product: item}
+            })
+            setCart({cart: cartDelRes.data.cart})
+        }catch(error){
+            console.log(error);
+        }
+    }
+
+    const incrementHandler = async() => {
+        const resForInc = await axios({
+            method: "post",
+            url:`/api/user/cart/${item._id}`,
+            headers: {authorization: user.token},
+            data: {
+                action: {
+                    type: "increment"
+                }
+            }
+        })
+        setCart({cart: resForInc.data.cart})
+    }
 
 
+    const decrementHandler = async() => {
+        const resForDec = await axios({
+            method:"delete",
+            url: `/api/user/cart/${item._id}`,
+            headers: {authorization: user.token},
+            data: {
+                action: {
+                    type: "decrement"
+                }
+            }
+        })
+        setCart({cart: resForDec.data.cart})
+    }
     return(
-        <div class="card-container cart-container">
-        <div class="prod-container">
-            <div class="prod-img-container">
-                <div class="prod-img">
+        <div className="card-container cart-container">
+        <div className="prod-container">
+            <div className="prod-img-container">
+                <div className="prod-img">
                     <img src={item.imgSrc} alt="sweatshirt"/>
                 </div>
             </div>
-            <div class="prod-name cart-prod-details"><h4>{item.productName} </h4>
-                <div class="prod-price-detail">
-                    <div class="prod-price"><h4><i class="fa-solid fa-rupee-sign">.</i> 999</h4> 
-                    <p class="prod-old-price"><i class="fa-solid fa-rupee-sign">.</i>{item.price}</p>
-                    <p><span class="primary-text-color"> (70% OFF)</span></p></div>
+            <div className="prod-name cart-prod-details"><h4>{item.productName} </h4>
+                <div className="prod-price-detail">
+                    <div className="prod-price"><h4><i className="fa-solid fa-rupee-sign">.</i> 999</h4> 
+                    <p className="prod-old-price"><i className="fa-solid fa-rupee-sign">.</i>{item.price}</p>
                 </div>
-                <div class="cta-button cta-button-cart">
-                    <div class="quantity-container">  
-                        <h4>Quantity: <button class="minus-btn">-</button><span>1</span><button class="plus-btn"> + </button></h4>
+                <div className="cta-button cta-button-cart">
+                    <div className="quantity-container">  
+                        <h4>Quantity: <button className="minus-btn" onClick={decrementHandler}>-</button><span>1</span><button className="plus-btn" onClick={incrementHandler}> + </button></h4>
                     </div>
-                    <button class="btn-primary-solid"><Link class="link-primary-solid"  href="#"><h4>REMOVE FROM CART</h4></Link></button>
-                    <button class="btn-primary-outline"><Link class="link-primary-outline"  href="#"><h4>MOVE TO WISHLIST</h4></Link></button>
+                    <button className="btn-primary-solid link-primary-solid" onClick={removeFromCart}><h4>REMOVE FROM CART</h4></button>
                 </div>
             </div>
         </div>
-        <div class="order-detail-container">
+        <div className="order-detail-container">
             <h4>ORDER DETAILS</h4>
-            <div class="price-detail-div">
+            <div className="price-detail-div">
                 <div>
-                    <ul class="price-detail-list">
+                    <ul className="price-detail-list">
                         <li><h4>Price :</h4></li>
                         <li><h4>Discount : </h4></li>
-                        <li><h4>Delivery Charges : </h4></li>
                     </ul>
                 </div>
                 <div>
-                    <ul class="price-list">
-                        <li style="padding-left: 10px;"><h4><i class="fa-solid fa-rupee-sign">.</i> {item.price} </h4></li>
-                        <li><h4> - <i class="fa-solid fa-rupee-sign">.</i> {(item.price/item.originalPrice)} </h4></li>
-                        <li style="padding-left:10px;"><h4> <i class="fa-solid fa-rupee-sign">.</i> 50</h4></li>
-                        <li></li>
+                    <ul className="price-list">
+                        <li style="padding-left: 10px;"><h4><i className="fa-solid fa-rupee-sign">.</i> {item.price} </h4></li>
+                        <li><h4> - <i className="fa-solid fa-rupee-sign">.</i> {(item.price/item.originalPrice)*100} </h4></li>
                     </ul>
                 </div>    
             </div> 
-            <div class="total-amt-container">
+            <div className="total-amt-container">
                 <h4>TOTAL AMOUNT</h4>
-                <h4 style="padding-left: 90px;"> <i class="fa-solid fa-rupee-sign">.</i> 1049</h4>
+                <h4 style="padding-left: 90px;"> <i className="fa-solid fa-rupee-sign">.</i> {cart.cart.reduce((acc, item) => acc + item.qty*item.price, 0 )} </h4>
             </div>
-            <h4>You will save <i class="fa-solid fa-rupee-sign">.</i> 1049 on this order</h4>
-            <div class="secondary-btn-container">
-                <button class="btn-secondary-solid"><a class="link-primary-solid"  href="#"><h4>PLACE ORDER</h4></a></button>
+            <div className="secondary-btn-container">
+                <button className="btn-secondary-solid"><a className="link-primary-solid"><h4>PLACE ORDER</h4></a></button>
             </div>
             
         </div>
+    </div>
     </div>
     )
 }
