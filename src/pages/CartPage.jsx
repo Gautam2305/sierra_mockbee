@@ -5,6 +5,7 @@ export const CartPage=({item}) => {
     const {cart} = useCart();
 
     const cartId = cart.cart.map(item => item._id);
+    console.log(cart.cart);
     return(
         <div>
             <nav className="main-nav">

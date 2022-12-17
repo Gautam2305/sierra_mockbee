@@ -8,7 +8,7 @@ const ProductCard = ({item,inWishlist,inCart}) =>{
     const navigate = useNavigate();
     const {user} = useAuth();
     const {wishlist,setWishlist} = useWishlist();
-    const {cart,setCart} = useCart();
+    const {setCart} = useCart();
 
     const addToWishlist = async () =>{
         if(user.token === null){
@@ -63,7 +63,6 @@ const ProductCard = ({item,inWishlist,inCart}) =>{
                 data: {product: item}
             })
             setCart({cart: cartRes.data.cart})
-            console.log(cartRes.data.cart);
         }catch(error){
             console.log("Oops", error);
         }

@@ -64,7 +64,7 @@ const LoginPage = () =>{
             </label>            
                 {/* <h6>By continuing, I agree to the <span className="primary-text-color">Terms of Use</span> & <span className="primary-text-color">Privacy Policy</span></h6> */}
                 <button className="btn-primary-solid" onClick={loginUserHandler}>
-                    <Link to="/" className="link-primary-solid" ><h4>CONTINUE</h4></Link></button>
+                    <Link to="/products" className="link-primary-solid" ><h4>CONTINUE</h4></Link></button>
                 <button className="btn-primary-outline">
                     <Link to="/signup" className="link-primary-outline" ><h4>SIGN UP</h4></Link></button>
                 {/* <h6>Have trouble logging in? <span className="primary-text-color">Get help</span></h6> */}
