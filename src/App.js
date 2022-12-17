@@ -1,7 +1,6 @@
 import "./App.css";
 import { MockAPI } from "./mockman";
 import { LandingPage } from "./pages/LandingPage";
-import { LogoutPage } from "./pages/LogoutPage";
 import { ProductsListPage } from "./pages/ProductsListPage";
 import { WishlistPage } from "./pages/WishlistPage";
 import { LoginPage } from "./pages/LoginPage";

@@ -5,7 +5,7 @@ import { useCart } from "../contexts/cart-context";
 
 export const CartCard = ({item}) => {
     const { user }= useAuth();
-    const { cart, setCart } = useCart();
+    const { setCart } = useCart();
 
     const removeFromCart = async () => {
         try{
@@ -90,7 +90,7 @@ export const CartCard = ({item}) => {
                 </div>    
             </div> 
             <div className="secondary-btn-container">
-                <button className="btn-secondary-solid"><a className="link-primary-solid"><h4>PLACE ORDER</h4></a></button>
+                <button className="btn-secondary-solid"><a className="link-primary-solid" href="#"><h4>PLACE ORDER</h4></a></button>
         </div>
         </div>
         </div>
