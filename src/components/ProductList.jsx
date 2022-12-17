@@ -7,11 +7,15 @@ import { ratingFilter,
         sortByCategoryFilter } from "../utils/filter-utilities";
 import { useFilter } from "../contexts/filter-context";
 import { useWishlist} from "../contexts/wishlist-context";
+import { useCart } from "../contexts/cart-context";
 export const ProductList = () => {
     const { products } = useProduct();
     const { state } = useFilter();
     const { wishlist } = useWishlist();
+    const {cart} = useCart();
     const wishlistId = wishlist.wishList.map((item) => item._id); 
+    const cartId = cart.cart.map((item) => item._id); 
+
 
     
     //filter functions
@@ -29,7 +33,8 @@ export const ProductList = () => {
                 <ProductCard  
                 inWishlist={wishlistId.includes(item._id)}
                 key={item.id} 
-                item={item} />
+                item={item}
+                inCart={cartId.includes(item._id)} />
                 )}
         
             </div>

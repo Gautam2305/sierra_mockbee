@@ -64,7 +64,8 @@
   grid-template-columns: repeat(4, 15rem);
 }
 .card-container{
-  max-width: 20rem;
+  min-width: 14rem;
+  max-width: 50rem;
   height: 32rem;
 }
 .prod-img{
@@ -96,9 +97,19 @@
 .category-list{
   display:block;
 }
-.wishlist-container{
+.wishlist-card{
   display: grid;
-  grid-template-columns: repeat(3,20rem);
+  grid-template-columns: repeat(3, 20rem);
+}
+.image{
   margin: auto;
-  gap: 1rem;
+}
+.btn-primary-solid,.btn-primary-outline{
+  border-radius: 0.3rem;
+}
+.order-detail-container{
+  margin-top: 100px;
+}
+.cart-container{
+  height: auto;
 }

@@ -6,6 +6,7 @@ import { ProductsListPage } from "./pages/ProductsListPage";
 import { WishlistPage } from "./pages/WishlistPage";
 import { LoginPage } from "./pages/LoginPage";
 import { RouterPath } from "./router/routes.js";
+import { CartPage } from "./pages/CartPage";
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
       <LoginPage/>
       <LandingPage/>
       <WishlistPage/>
+      <CartPage/>
       <ProductsListPage/>
       <MockAPI/>
       </RouterPath> 
