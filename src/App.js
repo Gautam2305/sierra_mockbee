@@ -16,8 +16,8 @@ function App() {
       <LoginPage/>
       <LandingPage/>
       <WishlistPage/>
-      <ProductsListPage/>
       <CartPage/>
+      <ProductsListPage/>
       <MockAPI/>
       </RouterPath> 
     </div>

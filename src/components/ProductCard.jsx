@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/auth-context";
 import { useWishlist } from "../contexts/wishlist-context";
 import axios from "axios";
