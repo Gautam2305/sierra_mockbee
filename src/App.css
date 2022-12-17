@@ -96,9 +96,15 @@
 .category-list{
   display:block;
 }
-.wishlist-container{
+/* .wishlist-card{
   display: grid;
   grid-template-columns: repeat(3,20rem);
-  margin: auto;
   gap: 1rem;
+} */
+.wishlist-card{
+  display: grid;
+  grid-template-columns: repeat(3, 20rem);
+}
+.image{
+  margin: auto;
 }

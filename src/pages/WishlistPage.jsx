@@ -10,7 +10,7 @@ export const WishlistPage = () => {
         <>
         <NavBar/>
         <main className="main-login wishlist-main">
-        <div className="card-container">
+        <div className="wishlist-card">
         { wishlist.wishList.map(prod => 
                 <ProductCard
                 inWishlist={wishlistId.includes(prod._id)}
