@@ -13,7 +13,7 @@ export const ProductsListPage = () =>{
     },0)
 },[])
     return(
-        <div>
+        <div className="products-container">
             <NavBar/>
             <div className="product-page-container">
             <Filter/>

@@ -2,7 +2,6 @@ import { useFilter } from "../contexts/filter-context";
 const Filter = () => {
     const { state, dispatch } = useFilter();
 return(
-<div>
     <div className="filter-container">
         <div className="slidecontainer">
             <div>
@@ -118,7 +117,6 @@ return(
             </div>
         </div>
     </div>
-</div>
 );
 }
 export { Filter };
