@@ -102,7 +102,7 @@ const ProductCard = ({item,inWishlist,inCart}) =>{
             </div>
             <div className="cta-button">
             {inWishlist ? (<button className="btn-primary-solid link-primary-solid" onClick={removeFromWishlist}><h4>REMOVE FROM WISHLIST</h4></button>) : (<button className=" btn-primary-solid link-primary-solid" onClick={addToWishlist}><h4>ADD TO WISHLIST</h4></button>)}
-            {inCart? (<button className="btn-primary-outline link-primary-outline" onClick={removeFromCart} ><h4>REMOVE FROM BAG</h4></button>):(<button className="btn-primary-outline link-primary-outline" onClick={addToCart} ><h4>ADD TO BAG</h4></button>)}
+            {inCart? (<button className="btn-primary-outline link-primary-outline" onClick={removeFromCart} ><h4>REMOVE FROM BAG</h4></button>):(<button className="btn-primary-outline link-primary-outline" onClick={addToCart} ><h4 style={{fontSize:"0.8rem"}}>ADD TO BAG</h4></button>)}
             </div>
         </div>
         </div>
