@@ -17,7 +17,7 @@ export const NavBar = () =>{
         <div>
             <nav className="main-nav">
                 <div className="nav-category">
-                    <h3 className="brand-name">SIERRA</h3>
+                    <Link to="/" style={{textDecoration:"none"}}><h3 className="brand-name">SIERRA</h3></Link>
                 </div>
                 <input className="nav-search" type="text" placeholder="Search for products, brands & more..."/>
                 <div className="nav-icons">
