@@ -93,9 +93,6 @@
 .image{
   margin: auto;
 }
-.cta-button{
-
-}
 .btn-primary-solid{
   border: 1px solid var(--st-primary);
   width: 98%;
@@ -114,7 +111,7 @@
 }
 /* main-nav */
 .main-nav{
-  width: 100%;
+  width: auto;
 }
 @media screen and (max-width: 720px) {
   .wishlist-icon,.bag-icon,.nav-search{

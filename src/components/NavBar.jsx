@@ -14,7 +14,6 @@ export const NavBar = () =>{
         setCart({cart: []})
     }
     return(
-        <div>
             <nav className="main-nav">
                 <div className="nav-category">
                     <Link to="/" style={{textDecoration:"none"}}><h3 className="brand-name">SIERRA</h3></Link>
@@ -25,8 +24,6 @@ export const NavBar = () =>{
                     <Link to="/wishlist" className="btn-icon wishlist-icon"><i className="fa-regular fa-heart"></i><h6> Wishlist</h6></Link>
                     <Link to="/cart" className="btn-icon bag-icon "><i className="fa-solid fa-bag-shopping"></i><h6> Bag</h6></Link>
                 </div>
-            </nav>
-        </div>
-        
+            </nav>        
     );
 }

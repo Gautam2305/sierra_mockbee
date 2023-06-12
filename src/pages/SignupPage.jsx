@@ -39,7 +39,7 @@ export const SignupPage = () => {
         <NavBar/>
         <main className="main-login">
         <div className="modal-login">
-            <h3>SIGN-UP</h3>
+            <h3>SIGN UP</h3>
             <label htmlFor="login-user">
                 <h4>Username</h4>
                 <input 
