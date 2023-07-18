@@ -35,8 +35,8 @@ From the navbar, users can navigate to my wishlist where all the products that t
 ## Sign-up Page
 Users can see a sign-up page from where they can sign-up using your email, username & password.
 ## Login Page
-You can see a login page from where you can log in using your email & password.
+Users can see a login page from where they can log in using your email & password.
 ## Logout
-You can see a logout button from where you can log out from the app on the header navbar.
+Users can see a logout button from where they can log out from the app on the header navbar.
 
 
